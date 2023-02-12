@@ -10,8 +10,9 @@ postgres=# select * from sample_prefpopulation;
   3 | saitama |   1 |         30
   4 | saitama |   2 |         30
 (4 rows)
-
-postgres=# select name, sum(case when sex=1 then population else 0 end) as men,sum(case when sex=2 then population else 0 end) as women from sample_prefpopulation group by name;
+6
+3
+p6ostgres=# select name, sum(case when sex=1 then population else 0 end) as men,sum(case when sex=2 then population else 0 end) as women from sample_prefpopulation group by name;
   name   | men | women 
 ---------+-----+-------
  tokyo   | 120 |    40
